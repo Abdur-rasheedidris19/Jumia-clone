@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,500;1,400;1,700&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+body {
+  font-family:  'Roboto,-apple-system,BlinkMacSystemFont',"Segoe UI","Helvetica Neue",Arial,sans-serif;
+  font-size: 1rem;
+  color: #333;
+  background: #f4f4f4;
+}
+img {
+  width: 100%;
+}
+.container {
+  max-width: 1200px;
+  width: 95%;
+  margin: auto;
+  overflow: hidden;
+}
+.top-nav .container{
+  height: 40px;
+}
+.top-nav .wrapper {
+  max-width: 750px;
+}
+.top-nav .container .wrapper .first-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.top-nav .container .wrapper .first-nav .circle {
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background: #f68b1e;
+}
+.top-nav .container .wrapper .first-nav .circle img {
+  padding: 0.7px;
+}
+.top-nav .container .wrapper .first-nav > div a {
+  color:#f68b1e;
+  text-decoration: none;
+  font-weight: 400;
+  padding-bottom: 2px;
+}
+.top-nav .container .wrapper .first-nav > div a:hover {
+  border-bottom: 1px solid #f68b1e;
+}
+.top-nav .container .wrapper .first-nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+}
+.top-nav .container .wrapper .first-nav ul li  a{
+  padding: 10px;
+  color: #d3d1d1;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 600;
+}
+.top-nav .container .wrapper .first-nav ul li  a:hover {
+  color: #f68b1e;
+}
+.search {
+  background: #fff;
+  box-shadow: 0 1px 1px rgba(24, 23, 23, 0.2);
+  height: 70px;
+  position: sticky;
+  width: 100%;
+}
+.search .container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.search .container img {
+  width: 10%;
+  height: 70px;
+  margin-right: 65px;
+}
+.form-control {
+  width: 750px;
+}
+input:not([type='submit']) {
+  width: 80%;
+  padding: 8px;
+  border-radius: 3px;
+  border: 1px solid #333;
+}
+.form-control .submit {
+  padding: 10px;
+  border-radius: 3px;
+  background: #f68b1e;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: 0;
+  box-shadow: 0 1px 1px rgba(46, 45, 45, 0.4);
+  margin-left: 10px;
+}
+.form-control .submit:hover {
+  opacity: 0.8;
+} 
+.search .container > div {
+  margin: 0 20px;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+.search .container > div a:hover {
+  color: #f68b1e;
+}
+
+.showcase {
+  margin-top: 20px;
+}
+.showcase .container .grid-3{
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  gap: 10px;
+  height: 380px;
+}
+.showcase .container .grid-3 .left {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 1px rgba(24, 23, 23, 0.1);
+}
+.showcase .container .grid-3 .left ul li {
+  line-height: 2.2;
+  margin-left: 25px;
+  font-size: .9rem;
+}
+.showcase .container .grid-3 .left ul li a:hover {
+  color: #f68b1e;
+}
+.showcase .container .grid-3 .mid {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 4px;
+}
+.showcase .container .grid-3 .mid img {
+  border-radius: 5px;
+}
+.showcase .container .grid-3 .right {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+}
+.showcase .container .grid-3 .right .right-top {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 1px rgba(24, 23, 23, 0.1);
+  padding-left: 20px;
+}
+.showcase .container .grid-3 .right .right-top > div {
+  display:flex;
+  height: 58px;
+  align-items: center;
+  font-weight: 700;
+}
+.showcase .container .grid-3 .right .right-top img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+.showcase .container .grid-3 .right .right-bottom {
+width: 100%;
+height: 100%;
+background: #fff;
+border-radius: 4px;
+box-shadow: 0 2px 1px rgba(24, 23, 23, 0.1);
+}
+.utility-bills{
+  margin-top: 15px;
+} 
+.utility-bills .container .grid-4{
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.utility-bills .container .grid-4 > div {
+  background: #fff;
+  height: 56px;
+  box-shadow: 0 2px 1px rgba(24, 23, 23, 0.1);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  font-weight: 600;
+}
+.utility-bills .container .grid-4 img {
+  background: #fff;
+  height: 40px;
+  width: 40px;
+  margin-right: 15px;
+}
