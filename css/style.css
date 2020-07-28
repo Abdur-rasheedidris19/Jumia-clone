@@ -47,9 +47,6 @@ gap: 10px;
   border-radius: 50%;
   background: #f68b1e;
 }
-.top-nav .container .wrapper .first-nav .circle img {
-  padding: 0.7px;
-}
 .top-nav .container .wrapper .first-nav > div a {
   color:#f68b1e;
   text-decoration: none;
@@ -81,7 +78,9 @@ gap: 10px;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
   height: 70px;
   position: sticky;
+  top: -1px;
   width: 100%;
+  z-index: 100;
 }
 .search .container {
   display: flex;
@@ -271,8 +270,9 @@ border-radius: 5px;
 
 .top-deals .container .grid-6 .cards:hover {
   box-shadow: 0 2px 4px 1px rgba(0,0,0,0.2);
-  transition: all 0.9s ease;
+  transition: all 0.2s ease;
   border-radius: 4px;
+  padding: 0 1px;
 }
 .top-deals .container .grid-6 .cards {
   position: relative;
@@ -319,4 +319,52 @@ border-radius: 5px;
 .top-deals .container .grid-6 .cards .cards-header img {
   border-radius: 5px;
   width: 100%;
+}
+.collections {
+  margin-top: 20px;
+}
+.collections .container {
+
+height: 300px;
+background: #fff;
+border-radius: 4px;
+}
+.collections .container h3 {
+  margin: 15px 30px 15px;
+}
+
+.collections  .container .grid-6 {
+  height: 250px;
+  margin: 0 10px;
+}
+.collections  .container .grid-6 .cards {
+  cursor: pointer;
+  padding-bottom: 5px;
+}
+.collections  .container .grid-6 .cards:hover {
+  box-shadow: 0 2px 4px 1px rgba(0,0,0,0.2);
+  transition: all 0.9s ease;
+  border-radius: 4px;
+
+}
+.collections  .container .grid-6 .card-body {
+  text-align: center;
+}
+.collections .container .grid-6 .cards .cards-body strike {
+  font-size: 0.7rem;
+}
+.giveaway {
+  margin-top : 20px;
+}
+.giveaway .container .grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background: #fff;
+  border-radius: 4px;;
+}
+.giveaway .container .grid-2 img {
+  border-radius: 4px;
+}
+.giveaway .container .grid-2 .cards {
+  padding: 5px;
 }
