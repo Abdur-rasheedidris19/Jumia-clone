@@ -18,51 +18,59 @@ body {
 img {
   width: 100%;
 }
-.grid-6 {
-  display: grid;
-grid-template-columns: repeat(6, 1fr);
-gap: 10px;
-} 
+/* Utility class*/
+
 .container {
   max-width: 1200px;
   width: 100%;
   margin: auto;
   overflow: hidden;
 }
+.grid-3{
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  gap: 10px;
+}
+.grid-6 {
+  display: grid;
+grid-template-columns: repeat(6, 1fr);
+gap: 10px;
+} 
+
 .top-nav .container{
   height: 40px;
 }
-.top-nav .wrapper {
+.top-nav .content {
   max-width: 750px;
 }
-.top-nav .container .wrapper .first-nav {
+.top-nav .container .content .first-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.top-nav .container .wrapper .first-nav .circle {
+.top-nav .container .content .first-nav .circle {
   display: inline-block;
   width: 21px;
   height: 21px;
   border-radius: 50%;
   background: #f68b1e;
 }
-.top-nav .container .wrapper .first-nav > div a {
+.top-nav .container .content .first-nav > div a {
   color:#f68b1e;
   text-decoration: none;
   font-weight: 400;
   padding-bottom: 2px;
 }
-.top-nav .container .wrapper .first-nav > div a:hover {
+.top-nav .container .content .first-nav > div a:hover {
   border-bottom: 1px solid #f68b1e;
 }
-.top-nav .container .wrapper .first-nav ul {
+.top-nav .container .content .first-nav ul {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 40px;
 }
-.top-nav .container .wrapper .first-nav ul li  a{
+.top-nav .container .content .first-nav ul li  a{
   padding: 10px;
   color: #d3d1d1;
   font-size: 1rem;
@@ -70,7 +78,7 @@ gap: 10px;
   text-decoration: none;
   font-weight: 600;
 }
-.top-nav .container .wrapper .first-nav ul li  a:hover {
+.top-nav .container .content .first-nav ul li  a:hover {
   color: #f68b1e;
 }
 .search {
@@ -254,30 +262,30 @@ border-radius: 5px;
 .top-selling .container .grid-6 .cards .cards-body strike {
   font-size: 0.9rem;
 }
-.top-deals {
+.wrapper {
   margin-top: 20px;
 }
-.top-deals .container{
+.wrapper .container{
   height: 350px;
   background: #fff;
   border-radius: 4px;
 }
-.top-deals .container .grid-6 {
+.wrapper .container .grid-6 {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 10px; 
 }
 
-.top-deals .container .grid-6 .cards:hover {
+.wrapper .container .grid-6 .cards:hover {
   box-shadow: 0 2px 4px 1px rgba(0,0,0,0.2);
   transition: all 0.2s ease;
   border-radius: 4px;
   padding: 0 1px;
 }
-.top-deals .container .grid-6 .cards {
+.wrapper .container .grid-6 .cards {
   position: relative;
 }
-.top-deals .container .grid-6 .cards .discount {
+.wrapper .container .grid-6 .cards .discount {
   padding: 1px  2px;
   background: #eed4bb;
   color: #f8830e;
@@ -286,20 +294,20 @@ border-radius: 5px;
   right: 5px;
   font-weight: 600;
 }
-.top-deals .container .grid-6 .cards .cards-body {
+.wrapper .container .grid-6 .cards .cards-body {
   cursor: pointer;
   line-height: 1.4;
   margin: 0 0 5px 10px;
 
 }
-.top-deals .container .grid-6 .cards .cards-body strike {
+.wrapper .container .grid-6 .cards .cards-body strike {
   font-size: 0.9rem;
 }
-.top-deals .container > div {
+.wrapper .container > div {
   display: flex;
   justify-content: space-between;
 }
-.top-deals .container .top {
+.wrapper .container .top {
   padding: 10px 30px 10px;
   background: red;
   color: #fff;
@@ -307,16 +315,24 @@ border-radius: 5px;
   margin-bottom: 20px;
   font-weight: 700;
 }
-.top-deals .container .top small {
+.wrapper .container .blue {
+  padding: 10px 30px 10px;
+  background: blue;
+  color: #fff;
+  width: 100%;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+.wrapper .container .top small {
   font-weight: normal;
   font-size: 1rem;
 }
-.top-deals .container > div a {
+.wrapper .container > div a {
   color: #fff;
   font-size: 1.2rem;
   font-weight: normal;
 }
-.top-deals .container .grid-6 .cards .cards-header img {
+.wrapper .container .grid-6 .cards .cards-header img {
   border-radius: 5px;
   width: 100%;
 }
@@ -395,8 +411,83 @@ footer {
 footer .newsletter {
   background: #282828;
   height: 150px;
+  color: #f1f1f1;
+}
+.newsletter .container .grid-3 {
+  gap: 25px;
+  padding: 25px 10px;
+}
+.newsletter .container .grid-3 form {
+  line-height: 1.6;
+} 
+.newsletter .container .grid-3 form p {
+  font-size: 0.8rem;
+  padding: 3px 0;
+}
+.newsletter .container .grid-3 form #email {
+  border: none;
+  border-radius: 3px;
+  width: 350px;
+  margin-top: 3px;
+  margin-right: 15px;
+}
+.newsletter .container .grid-3 form #button {
+  border: 1px solid #f1f1f1;
+  padding: 8px;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 3px;
+  margin-right: 7px;
+  color: #f1f1f1;
+  background: transparent;
+} 
+.newsletter .container .grid-3 form #button:hover {
+  color: #f68b1e;
+}
+.newsletter .container .grid-3 .playstore {
+  display: flex;
+  font-size: 0.7rem;
+  height: 100px;
+}
+.newsletter .container .grid-3 .playstore > div {
+  margin-left: 20px;
+}
+.newsletter .container .grid-3 img {
+  width: 30px;
+  height: 30px;
 }
 footer .main-footer {
   background: #0f0f0f;
-  height: 430px;
+  color: #f2f2f2;
+}
+footer .main-footer .container {
+  height: 230px;
+  padding: 10px 0;
+}
+footer .main-footer .container .grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 20px;
+  padding: 20px 0; 
+}
+footer .main-footer .container .grid-4 > div {
+  line-height: 1.8;
+  font-size: 0.8rem;
+  cursor: pointer;
+  color: #d3d1d1;
+  padding-left: 10px;
+}
+footer .main-footer .container .grid-4 > div  ul li:hover {
+  text-decoration: underline;
+}
+footer .main-footer .container .grid-4 .cont {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+}
+footer .main-footer .foot {
+  background: #1f1f1f;
+  color: #f3f3f3;
+  text-align: center;
+  padding: 10px 0;
 }
