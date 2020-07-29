@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,500;1,400;1,700&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,500;1,400;1,700&display=swap');
 * {
   box-sizing: border-box;
   margin: 0;
@@ -96,9 +96,10 @@ gap: 10px;
   align-items: center;
 }
 .search .container img {
-  width: 10%;
-  height: 70px;
+  width: 16%;
+  height: 55px;
   margin-right: 65px;
+  margin-top: 10px;
 }
 .form-control {
   width: 750px;
@@ -417,7 +418,12 @@ footer .newsletter {
   gap: 25px;
   padding: 25px 10px;
 }
+.newsletter .container .grid-3 .log {
+  width: 90%;
+  height: 70px;
+}
 .newsletter .container .grid-3 form {
+  padding-left: 80px;
   line-height: 1.6;
 } 
 .newsletter .container .grid-3 form p {
@@ -490,4 +496,13 @@ footer .main-footer .foot {
   color: #f3f3f3;
   text-align: center;
   padding: 10px 0;
+}
+
+
+/*Query media*/
+@media (max-width: 320px ){
+  .top-nav {
+    display: none;
+  }
+  
 }
